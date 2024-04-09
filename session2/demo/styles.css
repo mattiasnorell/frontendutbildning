@@ -1,0 +1,238 @@
+html {
+    font-size: 16px;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 1vh;
+}
+
+.application-wrapper {
+    height: 100vh;
+}
+
+.client-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+
+.inbox {
+    display: grid;
+    grid-template-rows: 120px 50px 50px 1fr;
+    height: 100vh;
+    border-right: 1px solid #000;
+    background-color: rgb(242, 242, 242)
+}
+
+.inbox .inbox-search {
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.inbox .inbox-search input {
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.inbox .inbox-folders {
+    padding: 0.5rem;
+    border-bottom: 1px solid #000;
+}
+
+.inbox .inbox-folders .inbox-folders__item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.inbox .inbox-folders .inbox-folders__item .inbox-folders__item--name {
+    font-size: 1rem;
+}
+
+.inbox .inbox-folders .inbox-folders__item .inbox-folders__item--count {
+    font-size: 1rem;
+}
+
+.inbox-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px solid #000;
+    overflow: auto;
+}
+
+.inbox .inbox-item {
+    position: relative;
+    border-bottom: 1px solid #000;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.inbox .inbox-item:hover {
+    background-color: #ccc;
+}
+
+.inbox .inbox-item.is-active::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: #666;
+    top: 0;
+    right: 0;
+}
+
+.inbox .inbox-item.is-spam {
+    background-color: lightpink;
+}
+
+.inbox .inbox-item.is-read .inbox-item__subject,
+.inbox .inbox-item.is-read .inbox-item__from {
+    font-weight: 400;
+}
+
+.inbox .inbox-item .inbox-item__subject {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.inbox .inbox-item .inbox-item__from {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.inbox .inbox-item__empty {
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+    color: #666;
+    height: 50px;
+    border-bottom: 1px solid #000;
+}
+
+.email-content {
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    height: 100vh;
+}
+
+.email-content header {
+    background-color: #ccc;
+    padding: 1rem;
+    border-bottom: 1px solid;
+}
+
+.email-content section {
+    padding: 1rem;
+    overflow: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#email-content-attachements{
+    margin-top: 40px;
+}
+
+.email-content section .attachment{
+    position: relative;
+    display: flex;
+    justify-items: center;
+}
+
+.email-content section .attachment a{
+    color: #333333;
+}
+
+.email-content section .attachment a[href$='.pdf']::before{
+    display: inline-flex;
+    content: '';
+    background-image: url(./pdf.svg);
+    background-size: 1rem 1rem;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 4px;
+}   
+
+.email-content header .email-content__subject {
+    font-size: 1.5rem;
+}
+
+.email-content header .email-content__date {
+    font-size: 1rem;
+}
+
+.email-content header .email-content__from {
+    margin-top: 0.5rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-compose{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: 0;
+    right: 50px;
+    background-color: #fff;
+    display: none;
+  
+    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+}
+
+.email-compose.open{
+    display: block;
+}
+
+.email-compose form{
+    height: 100%;
+}
+
+.email-compose__wrapper{
+    display: grid;
+    grid-template-rows: 50px 1fr 40px;
+    height: 100%;
+}
+
+.email-compose header{
+    padding: 16px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-compose footer{
+    padding-left: 16px;
+}
+
+.email-compose .email-compose__form{
+    padding: 16px;
+    display: grid;
+    grid-template-rows: 36px 36px 36px 36px 1fr;
+}
+
+.email-compose .email-compose__form .email-compose__form--input {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.email-compose .email-compose__form .mail-compose__form--input input{
+    border: 0;
+} 
+
+.email-compose .email-compose__form .email-compose__form--textarea textarea{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}

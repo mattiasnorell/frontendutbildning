@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var outsideVariable = "Variabel som nås överallt";
+
+        (function() {
+            var scopedVariable = "Scopad variabel";
+            console.log("I Scopead funktion - outsideVariable: ", outsideVariable);
+            console.log("I Scopead funktion - scopedVariable: ", scopedVariable);
+        })();
+
+        console.log("I root - outsideVariable: ", outsideVariable);
+        console.log("I window - outsideVariable: ", window.outsideVariable);
+        console.log("I root - scopedVariable utanför scope: ", scopedVariable);
+        
+    </script>
+</head>
+<body>
+    <script>
+        console.log("I body - outsideVariable: ", outsideVariable);
+        console.log("I body - scopedVariable: ", scopedVariable);
+    </script>
+</body>
+
+</html>

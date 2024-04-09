@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var myFunction = function (input) {
+            
+            function myPrivateFunction() {
+                var splitString = input.split("");
+                var reversedArray = splitString.reverse();
+
+                return reversedArray.join("");
+            }
+
+            return {
+                length: function () {
+                    return input.length;
+                },
+                reverse: function () {
+                    return myPrivateFunction();
+                }
+            }
+        };
+
+        var fooInstance = new myFunction("Foo");
+        var barInstance = new myFunction("Bar!");
+
+        console.log(fooInstance.length());
+        console.log(fooInstance.reverse());
+
+        console.log(barInstance.length());
+        console.log(barInstance.reverse());
+    </script>
+
+</body>
+
+</html>

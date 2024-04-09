@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Frontendlunch del 2</title>
+
+    <meta name="description" content="Beskrivning av sidan" />
+    <meta name="keywords" content="html, css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="application-wrapper">
+        <div class="client-wrapper">
+            <div class="inbox">
+
+                <div class="inbox-folders">
+                    <div class="inbox-folders__item" data-folder-id="1">
+                        <div class="inbox-folders__item--name">Inbox</div>
+                        <div class="inbox-folders__item--count" id="inbox-folders-total-count"></div>
+                    </div>
+
+                    <div class="inbox-folders__item" data-folder-id="1" data-only-show-unread>
+                        <div class="inbox-folders__item--name">Olästa</div>
+                        <div class="inbox-folders__item--count" id="inbox-folders-unread-count"></div>
+                    </div>
+
+                    <div class="inbox-folders__item" data-folder-id="2">
+                        <div class="inbox-folders__item--name">Spam</div>
+                        <div class="inbox-folders__item--count" id="inbox-folders-spam-count"></div>
+                    </div>
+
+                    <div class="inbox-folders__item" data-folder-id="3">
+                        <div class="inbox-folders__item--name">Skickat</div>
+                        <div class="inbox-folders__item--count" id="inbox-folders-sent-count"></div>
+                    </div>
+                </div>
+
+                <div class="inbox-search">
+                    <button onclick="handleEmailComposerOpen()">Skriv mail</button>
+                </div>
+
+                <div class="inbox-search">
+                    <input id="inbox-search" placeholder="Sök" />
+                </div>
+
+                <div class="inbox-items"></div>
+            </div>
+
+            <div class="email-content">
+                <header>
+                    <div class="flex-container">
+                        <div class="email-content__subject" id="email-content-subject"></div>
+
+                        <div class="email-content__date">
+                            <span id="email-content-date"></span>
+                        </div>
+                    </div>
+
+                    <div class="email-content__from">
+                        <span>Från:</span> <span id="email-content-from"></span>
+                    </div>
+                </header>
+                <section>
+                    <div id="email-content-body"></div>
+                    <div id="email-content-attachements"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="email-compose">
+        <form id="email-compose-form">
+            <div class="email-compose__wrapper">
+
+                <header>
+                    <span>Nytt mail</span>
+                    <button type="reset" onclick="handleEmailComposerClose()">X</button>
+                </header>
+
+                <div class="email-compose__form">
+                    <div class="email-compose__form--input">
+                        <label for="email-from">Från</label>
+                        <input type="text" id="email-from" name="emailFrom" placeholder="Från" />
+                    </div>
+
+                    <div class="email-compose__form--input">
+                        <label for="email-to">Till</label>
+                        <input type="text" id="email-to" name="emailTo" placeholder="Till" />
+                    </div>
+
+                    <div class="email-compose__form--input">
+                        <label for="email-from">Ämne</label>
+                        <input type="text" name="emailSubject" placeholder="Rubrik" />
+                    </div>
+                    <div class="email-compose__form--input">
+                        <label for="email-from">Bilaga</label>
+                        <input type="file" name="emailAttachment" placeholder="Bilaga" />
+                    </div>
+
+                    <div class="email-compose__form--textarea">
+                        <textarea name="emailBody"></textarea>
+                    </div>
+                </div>
+
+                <footer>
+                    <button>Skicka</button>
+                </footer>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        console.log("hoistedVariable - Före", hoistedVariable); // Resultat: undefined
+        var hoistedVariable = "Hoisted";
+        console.log("hoistedVariable - Efter", hoistedVariable); // Resultat: "Hoisted"
+
+        console.log("constVariable - Före", constVariable); // Resultat: ReferenceError
+        const constVariable = "Const";
+        console.log("constVariable - Efter", constVariable); // Resultat: Const
+    </script>
+
+</body>
+
+</html>

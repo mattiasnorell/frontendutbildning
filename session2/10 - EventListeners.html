@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #my-element {
+            border: 1px solid red;
+            background-color: pink;
+            padding: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="my-element"></div>
+
+    <button onclick="handleOnAddEvent()">Lägg till event</button>
+    <button onclick="handleOnRemoveEvent()">Ta bort event</button>
+
+
+
+    <script>
+        const myElement = document.getElementById("my-element");
+
+        function handleOnClick() {
+            alert("Klick!");
+        }
+
+        function handleOnAddEvent() {
+            myElement.addEventListener("click", handleOnClick);
+        }
+
+        function handleOnRemoveEvent() {
+            myElement.removeEventListener("click", handleOnClick);
+        }
+    </script>
+
+</body>
+
+</html>

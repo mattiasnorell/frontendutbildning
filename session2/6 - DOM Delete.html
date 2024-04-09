@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="my-parent-element"></div>
+
+    <script>
+        const myParentElement = document.getElementById("my-parent-element");
+        const myChildElement = document.createElement("div");
+
+        myChildElement.innerText = "Detta är en ny div";
+
+        myParentElement.appendChild(myChildElement);
+
+        setTimeout(function() {
+            console.log("Tar bort div:en");
+            
+            myParentElement.removeChild(myChildElement);
+        }, 4000);
+    </script>
+
+</body>
+
+</html>

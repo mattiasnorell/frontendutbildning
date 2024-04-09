@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    div{
+        border: 1px solid red;
+        background-color: pink;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    div:last-of-type{
+        margin-bottom: 0px;
+    }
+
+    div div{
+        background-color: darkred;
+    }
+</style>
+<body>
+
+  
+    <p>myElement</p>
+    <div class="my-class-name"></div>
+    
+    <p>myElements</p>
+    <div>
+        <div class="my-class-name"></div>
+        <div class="my-class-name"></div>
+        <div class="my-class-name"></div>
+    </div>
+    
+    <p>myElementByQuerySelectorId / myElementById</p>
+    <div id="my-id-name"></div>
+    
+    <script>
+        const myElement = document.querySelector(".my-class-name");
+        console.log("myElement",myElement)
+        
+        const myElements = document.querySelectorAll(".my-class-name");
+        console.log("myElements",myElements)
+        
+        const myElementByQuerySelectorId = document.querySelector("#my-id-name");
+        console.log("myElementByQuerySelectorId",myElementByQuerySelectorId)
+
+        const myElementById = document.getElementById("my-id-name");
+        console.log("myElementById",myElementById)
+    </script>
+
+</body>
+
+</html>

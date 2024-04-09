@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .buttons {
+            margin-top: 40px;
+        }
+
+        #my-element {
+            border: 1px solid red;
+            background-color: pink;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="my-element" my-attribute="Värde som ska bytas ut"></div>
+
+    <div class="buttons">
+        <button onclick="handleOnClick()">Ändra attributets värde</button>
+    </div>
+
+    <script>
+        const myElement = document.getElementById("my-element");
+        const myAttribute = myElement.getAttribute("my-attribute");
+
+        console.log("Gamla värdet: ", myAttribute);
+
+
+        function handleOnClick() {
+            var promptValue = prompt("Ange nytt attributvärde", "");
+
+            if (promptValue) {
+                myElement.setAttribute("my-attribute", promptValue);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

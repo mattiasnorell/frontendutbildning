@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .buttons {
+            margin-top: 40px;
+        }
+
+        #my-element {
+            border: 1px solid red;
+            background-color: pink;
+            padding: 20px;
+        }
+
+
+        #my-element.new-class {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="my-element"></div>
+
+    <div class="buttons">
+        <button onclick="handleOnAdd()">Lägg till klass</button>
+        <button onclick="handleOnRemove()">Ta bort klass</button>
+        <button onclick="handleOnToggle()">Toggla klass</button>
+        <button onclick="handleOnContains()">Innehåller den klassen?</button>
+    </div>
+
+    <script>
+        const myElement = document.getElementById("my-element");
+
+        function handleOnAdd() {
+            myElement.classList.add("new-class");
+        }
+
+        function handleOnRemove() {
+            myElement.classList.remove("new-class");
+        }
+
+        function handleOnToggle() {
+            myElement.classList.toggle("new-class");
+        }
+
+        function handleOnContains() {
+            const result = myElement.classList.contains("new-class");
+
+            console.log(result ? "Innehåller klassen" : "Innehåller inte klassen");
+        }
+    </script>
+
+</body>
+
+</html>
