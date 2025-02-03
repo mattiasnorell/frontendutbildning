@@ -1,0 +1,47 @@
+html {
+    font-size: 16px;
+    /* Grundstorleken som rem-storlekar på resten av sidan kan använda */
+}
+
+body {
+    /* Ta bort alla marginaler och paddings på body-elementet */
+    margin: 0;
+    padding: 0;
+
+    /* Sätta vilket typsnitt som ska användas på sidan, kan även läggas på individuella element */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Typografi */
+h1 {
+    /* Sätter teckenstorleken till värdet på html-taggen gånger, i det här fallet, två */
+    font-size: 2rem;
+
+    /* Sätter tjockleken på texten */
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+img {
+    /* Används för att bilden inte ska tränga utanför sitt förälderelement */
+    max-width: 100%;
+}

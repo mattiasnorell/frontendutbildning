@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Frontendlunch del 1</title>
+
+    <meta name="description" content="Beskrivning av sidan" />
+    <meta name="keywords" content="html, css" />
+
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <ul>
+                <li><a href="/">Startsida</a></li>
+                <li class="active"><a href="/">Om oss</a></li>
+                <li><a href="/">Nyheter</a></li>
+                <li>
+                    <a href="/">Logga in</a>
+
+                    <div class="login-form">
+                        <form method="post" action="/api/endpoint">
+                            <div class="form-input">
+                                <label for="login-username">Användarnamn:</label>
+                                <input id="login-username" aria-label="Skriv sitt användarnamn här" type="text">
+                            </div>
+
+                            <div class="form-input">
+                                <label for="login-password">Lösenord</label>
+                                <input id="login-password" type="password">
+                            </div>
+
+                            <button type="submit">Logga in</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="container">
+            <h1>Detta är vår rubrik, en h1:a</h1>
+
+            <p>Detta är en ingress som beskriver texten nedan i svepande drag</p>
+
+            <h2>Detta är en underrubrik av typen h2</h2>
+
+            <a href="https://www.consid.se" target="_blank">Praesent ac erat porttitor enim pretium molestie</a>
+
+            <h3>Detta är en underrubrik av typen h3</h3>
+
+            <ul>
+                <li>Första raden i listan</li>
+                <li>Andra raden i listan</li>
+                <li>Tredje raden i listan</li>
+                <li>Fjärde raden i listan</li>
+            </ul>
+
+            <ol>
+                <li>Första raden i listan</li>
+                <li>Andra raden i listan</li>
+                <li>Tredje raden i listan</li>
+                <li>Fjärde raden i listan</li>
+            </ol>
+
+            <img src="900x360.png" alt="En bildtext" />
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Text i footer</p>
+        </div>
+    </div>
+</body>
+
+</html>

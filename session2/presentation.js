@@ -1,5 +1,5 @@
 /*
-FRONTEND FÜR ALLES - Del 2
+FRONTEND FÖR ALLA - Del 2
 JavaScript
 
 
@@ -52,18 +52,21 @@ console.log("Eller skicka in en variabel", myVariable);
 
 
 
-
 // Funktioner
 
 // Deklarerad funktion
-function myFunction(input) {
+function declaredFunction(input) {
     console.log(input);
 }
 
+declaredFunction("My value"); // Resultat: My value;
+
 // "Arrow"-funktion
-const myFunction = (input) => {
+const arrowFunction = (input) => {
     console.log(input);
 }
+
+arrowFunction("My value"); // Resultat: My value;
 
 
 // Självexekverande funktion
@@ -71,4 +74,8 @@ const myFunction = (input) => {
     console.log(input) // Resultat: vår input-variabel
 })("vår input-variabel");
 
-myFunction("Värde som skickas in i funktionen");
+
+// Globala moduler
+window  // webbläsaren
+
+document // root-noden av html-dokumentet
