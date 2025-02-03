@@ -3,5 +3,7 @@ export function reverse(input){
 }
 
 export function length(input){
+    if(!input) return 0;
+    
     return input.length;
 }

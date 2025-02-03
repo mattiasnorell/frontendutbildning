@@ -1,18 +1,19 @@
 {
     "name": "frontend-session-3",
     "version": "3.0.0",
-    "type": "module",
+    
     "scripts": {
         "dev": "esbuild script.js --bundle --watch --outfile=www/output.js",
         "serve": "esbuild script.js --bundle --watch --serve=9000 --outfile=www/output.js --servedir=www",
         "build": "esbuild script.js --bundle --outfile=build/output.js",
         "production": "esbuild script.js --minify --sourcemap --bundle --outfile=build/output.js",
-        "test": ""
+        "test": "npx playwright test"
     },
     "dependencies": {
-        "lodash-es": "^4.17.21"
+        "lodash-es": "^4.17.21",
+        "playwright": "^1.50.1"
     },
     "devDependencies": {
-        
+        "@playwright/test": "^1.50.1"
     }
 }
